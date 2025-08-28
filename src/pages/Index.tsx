@@ -30,46 +30,69 @@ export default function Index() {
   const { additionalRevenue, roi, paybackMonths } = calculateROI();
 
   return (
-    <div className="min-h-screen bg-white font-sans">
+    <div className="min-h-screen bg-gray-50 font-sans">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary via-primary/90 to-secondary py-20 px-4 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <section className="relative bg-primary py-24 px-4 text-white">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/20"></div>
         
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center mb-12 animate-fade-in">
-            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Привлекаем пациентов<br />
-              в стоматологии с оборотом<br />
-              <span className="text-secondary">2-10 млн/мес</span>
+        <div className="container mx-auto max-w-5xl relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 mb-8">
+              <Icon name="Award" size={16} className="text-white" />
+              <span className="text-sm font-medium">Экспертное агентство маркетинга для стоматологий</span>
+            </div>
+            
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+              Увеличиваем прибыль<br />
+              стоматологических клиник<br />
+              <span className="text-accent">на 183% за 90 дней</span>
             </h1>
-            <div className="text-xl md:text-2xl mb-8 font-medium">
-              Со 100% окупаемостью. Реальный кейс: <span className="text-secondary font-bold">55 млн ₽</span> выручки 
-              с <span className="text-secondary font-bold">300 000 ₽</span> вложений в маркетинг
+            
+            <div className="max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl mb-8 opacity-95 leading-relaxed">
+                Работаем только с частными стоматологиями в городах от 100 000 жителей. 
+                Гарантируем стоимость заявки не выше <strong>2 100 ₽</strong> при средней рентабельности <strong>183%</strong>
+              </p>
             </div>
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 mb-8">
-              <Icon name="Target" size={20} className="text-secondary" />
-              <span className="text-lg">Стоимость заявки — <strong>2 100 ₽</strong></span>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-semibold text-lg px-8 py-4 shadow-lg">
+                <Icon name="Calculator" size={20} className="mr-2" />
+                Рассчитать потенциальную прибыль
+              </Button>
+              <div className="text-sm opacity-75">
+                Бесплатная консультация • Без обязательств
+              </div>
             </div>
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-heading text-lg px-8 py-4 rounded-full shadow-lg transition-transform hover:scale-105">
-              <Icon name="Calculator" size={20} className="mr-2" />
-              Рассчитать мой потенциальный ROI
-            </Button>
           </div>
 
-          <div className="text-center text-lg opacity-90">
-            <p className="mb-2">Работаем только с частными стоматологиями в городах от 100 000 жителей</p>
-            <p className="font-semibold">Мы не обещаем «лидов» — мы гарантируем полных кресел и рост выручки</p>
+          <div className="grid md:grid-cols-3 gap-6 text-center">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold mb-2">2 100 ₽</div>
+              <div className="text-sm opacity-75">Стоимость заявки</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold mb-2">183%</div>
+              <div className="text-sm opacity-75">Средний ROI</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold mb-2">60+ млн</div>
+              <div className="text-sm opacity-75">Выручки клиентов</div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Problems Section */}
-      <section className="py-16 px-4 bg-muted/30">
+      <section className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Вам знакомы эти проблемы?
+          <div className="text-center mb-16">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-primary">
+              Знакомые проблемы владельцев стоматологий
             </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Анализ 500+ стоматологических клиник показал главные болевые точки в привлечении пациентов
+            </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-6">
@@ -95,15 +118,15 @@ export default function Index() {
                 description: 'сбивая цены на рынке'
               }
             ].map((problem, index) => (
-              <Card key={index} className="border-l-4 border-l-accent bg-white hover:shadow-lg transition-all duration-300 hover:scale-105">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-accent/10 p-3 rounded-lg">
-                      <Icon name={problem.icon} size={24} className="text-accent" />
+              <Card key={index} className="border border-gray-200 bg-white hover:shadow-md transition-all duration-200">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-6">
+                    <div className="bg-red-50 p-4 rounded-lg">
+                      <Icon name={problem.icon} size={28} className="text-red-600" />
                     </div>
                     <div>
-                      <h3 className="font-heading font-semibold text-lg mb-2">{problem.title}</h3>
-                      <p className="text-muted-foreground">{problem.description}</p>
+                      <h3 className="font-heading font-bold text-xl mb-3 text-primary">{problem.title}</h3>
+                      <p className="text-muted-foreground text-lg leading-relaxed">{problem.description}</p>
                     </div>
                   </div>
                 </CardContent>

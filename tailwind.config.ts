@@ -25,15 +25,15 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#0066CC',
+					DEFAULT: '#1E293B',
 					foreground: '#FFFFFF'
 				},
 				secondary: {
-					DEFAULT: '#00D4AA',
-					foreground: '#000000'
+					DEFAULT: '#64748B',
+					foreground: '#FFFFFF'
 				},
 				accent: {
-					DEFAULT: '#FF6B35',
+					DEFAULT: '#2563EB',
 					foreground: '#FFFFFF'
 				},
 				destructive: {
@@ -41,8 +41,8 @@ export default {
 					foreground: 'hsl(var(--destructive-foreground))'
 				},
 				muted: {
-					DEFAULT: '#F8F9FA',
-					foreground: '#6C757D'
+					DEFAULT: '#F1F5F9',
+					foreground: '#475569'
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
@@ -50,7 +50,7 @@ export default {
 				},
 				card: {
 					DEFAULT: '#FFFFFF',
-					foreground: '#000000'
+					foreground: '#1E293B'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -64,8 +64,8 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ['Open Sans', 'sans-serif'],
-				heading: ['Montserrat', 'sans-serif']
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+				heading: ['Inter', 'system-ui', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
