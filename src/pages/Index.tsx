@@ -30,22 +30,24 @@ export default function Index() {
   const { additionalRevenue, roi, paybackMonths } = calculateROI();
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans">
+    <div className="min-h-screen bg-white font-sans">
       {/* Hero Section */}
-      <section className="relative bg-primary py-24 px-4 text-white">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/20"></div>
+      <section className="relative bg-gradient-to-br from-primary to-primary/90 py-24 px-4 text-white">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.03%22%3E%3Cpath%20d%3D%22M40%2020c11.046%200%2020%208.954%2020%2020s-8.954%2020-20%2020-20-8.954-20-20%208.954-20%2020-20zm0%205c-8.284%200-15%206.716-15%2015s6.716%2015%2015%2015%2015-6.716%2015-15-6.716-15-15-15z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
         <div className="container mx-auto max-w-5xl relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 mb-8">
-              <Icon name="Award" size={16} className="text-white" />
-              <span className="text-sm font-medium">Экспертное агентство маркетинга для стоматологий</span>
+            <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8">
+              <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                <div className="w-4 h-4 bg-white rounded-full"></div>
+              </div>
+              <span className="text-sm font-medium">Специализированное агентство для стоматологических клиник</span>
             </div>
             
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-              Увеличиваем прибыль<br />
-              стоматологических клиник<br />
-              <span className="text-accent">на 183% за 90 дней</span>
+              Эффективный маркетинг<br />
+              для стоматологических клиник<br />
+              <span className="text-accent">с гарантией результата</span>
             </h1>
             
             <div className="max-w-3xl mx-auto">
@@ -67,31 +69,44 @@ export default function Index() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 text-center">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Icon name="Target" size={24} className="text-white" />
+              </div>
               <div className="text-3xl font-bold mb-2">2 100 ₽</div>
-              <div className="text-sm opacity-75">Стоимость заявки</div>
+              <div className="text-sm opacity-80">Средняя стоимость заявки</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Icon name="TrendingUp" size={24} className="text-white" />
+              </div>
               <div className="text-3xl font-bold mb-2">183%</div>
-              <div className="text-sm opacity-75">Средний ROI</div>
+              <div className="text-sm opacity-80">Средний ROI для клиник</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold mb-2">60+ млн</div>
-              <div className="text-sm opacity-75">Выручки клиентов</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Icon name="Users" size={24} className="text-white" />
+              </div>
+              <div className="text-3xl font-bold mb-2">500+</div>
+              <div className="text-sm opacity-80">Новых пациентов в месяц</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Problems Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-secondary/30">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-6">
+              <Icon name="AlertTriangle" size={16} className="text-primary" />
+              <span className="text-sm font-medium text-primary">Диагностика проблем</span>
+            </div>
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-primary">
-              Знакомые проблемы владельцев стоматологий
+              Типичные проблемы стоматологических клиник
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Анализ 500+ стоматологических клиник показал главные болевые точки в привлечении пациентов
+              По данным исследования 500+ клиник в городах 100-500к жителей
             </p>
           </div>
           
@@ -118,15 +133,19 @@ export default function Index() {
                 description: 'сбивая цены на рынке'
               }
             ].map((problem, index) => (
-              <Card key={index} className="border border-gray-200 bg-white hover:shadow-md transition-all duration-200">
+              <Card key={index} className="border-l-4 border-l-primary bg-white shadow-sm hover:shadow-md transition-all duration-200">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-6">
-                    <div className="bg-red-50 p-4 rounded-lg">
-                      <Icon name={problem.icon} size={28} className="text-red-600" />
+                    <div className="bg-primary/10 p-4 rounded-xl">
+                      <Icon name={problem.icon} size={28} className="text-primary" />
                     </div>
                     <div>
                       <h3 className="font-heading font-bold text-xl mb-3 text-primary">{problem.title}</h3>
                       <p className="text-muted-foreground text-lg leading-relaxed">{problem.description}</p>
+                      <div className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
+                        <Icon name="Clock" size={14} />
+                        <span>Решаем за 30-60 дней</span>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
@@ -148,37 +167,55 @@ export default function Index() {
             </p>
           </div>
 
-          {/* Case Study Visual */}
-          <div className="mb-16 bg-gradient-to-r from-secondary/5 to-primary/5 rounded-2xl p-8">
+          {/* Medical Focus Section */}
+          <div className="mb-16 bg-white rounded-2xl p-8 border border-primary/20 shadow-lg">
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="font-heading text-2xl font-bold mb-4">Реальный кейс из Первоуральска</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
-                    <span className="font-medium">Бюджет:</span>
-                    <span className="text-primary font-bold">293 064 ₽</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
-                    <span className="font-medium">Выручка:</span>
-                    <span className="text-secondary font-bold">60 305 442 ₽</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
-                    <span className="font-medium">ROI:</span>
-                    <span className="text-accent font-bold">20 580%</span>
-                  </div>
-                </div>
-                <Badge className="mt-4 bg-secondary text-secondary-foreground">
-                  <Icon name="MapPin" size={16} className="mr-1" />
-                  Город ~100k жителей
-                </Badge>
-              </div>
               <div className="relative">
                 <img 
-                  src="/img/e9d299e0-ec8e-4817-9eae-2fa7f9cb08bd.jpg" 
-                  alt="Современная стоматологическая клиника"
-                  className="rounded-lg shadow-lg w-full object-cover h-64"
+                  src="/img/31c06729-d6b5-4e1d-ad7a-5e5c851a57a3.jpg" 
+                  alt="Профессиональный стоматолог в работе"
+                  className="rounded-xl shadow-md w-full object-cover h-80"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+                <div className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">
+                  Наша специализация
+                </div>
+              </div>
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                    <div className="w-6 h-6 bg-white rounded-full"></div>
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-2xl font-bold text-primary">Медицинский маркетинг</h3>
+                    <p className="text-muted-foreground">с пониманием специфики</p>
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4 p-4 bg-secondary/30 rounded-lg">
+                    <Icon name="Shield" size={24} className="text-primary" />
+                    <div>
+                      <div className="font-semibold text-primary">Соблюдение медицинского законодательства</div>
+                      <div className="text-sm text-muted-foreground">ФЗ-323, требования Росздравнадзора</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-4 p-4 bg-secondary/30 rounded-lg">
+                    <Icon name="Users" size={24} className="text-primary" />
+                    <div>
+                      <div className="font-semibold text-primary">Понимание пациентских потребностей</div>
+                      <div className="text-sm text-muted-foreground">психология принятия решений о лечении</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-4 p-4 bg-secondary/30 rounded-lg">
+                    <Icon name="Star" size={24} className="text-primary" />
+                    <div>
+                      <div className="font-semibold text-primary">Медицинская экспертиза</div>
+                      <div className="text-sm text-muted-foreground">консультации практикующих стоматологов</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
